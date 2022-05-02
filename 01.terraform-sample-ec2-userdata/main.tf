@@ -8,12 +8,12 @@ module "ec2_instance" {
 
   name = "single-instance"
 
-  ami                    = "ami-04505e74c0741db8d"
+  ami                    = "ami-09d56f8956ab235b3"
   instance_type          = "t2.micro"
-  key_name               = "vpectesting"
+  key_name               = "docker"
   monitoring             = true
-  vpc_security_group_ids = ["sg-026e6de718633f70f"]
-  subnet_id              = "subnet-0ac4be71aa723b6f6"
+  vpc_security_group_ids = ["sg-00eaff57610a9bb3d"]
+  subnet_id              = "subnet-0b5a55464587680c0"
     user_data = <<-EOF
               #!/bin/bash
               echo "Hello, World" > index.html
